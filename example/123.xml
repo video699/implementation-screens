@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<room id="123" name="Lecture hall three, building one, floor two">
+  <screens>
+    <screen id="no_from_no_until"
+    name="A projection screen with no from attribute, and no until attribute">
+      <positions>
+        <position datetime="2018-01-01T00:00:00+00:00" x0="1" x1="2" x2="1" x3="2" y0="1" y1="1" y2="2" y3="2" />
+        <position datetime="2018-02-01T00:00:00+00:00" x0="3" x1="4" x2="3" x3="4" y0="3" y1="3" y2="4" y3="4" />
+        <position datetime="2018-03-01T00:00:00+00:00" x0="5" x1="6" x2="5" x3="6" y0="5" y1="5" y2="6" y3="6" />
+      </positions>
+    </screen>
+    <screen id="early_from_no_until"
+    name="A projection screen with the from attribute set before 2018-01-01T00:00:00+00:00, and with no until attribute"
+    from="2017-12-31T23:59:59+00:00">
+      <positions>
+        <position datetime="2018-01-01T00:00:00+00:00" x0="1" x1="2" x2="1" x3="2" y0="1" y1="1" y2="2" y3="2" />
+        <position datetime="2018-02-01T00:00:00+00:00" x0="3" x1="4" x2="3" x3="4" y0="3" y1="3" y2="4" y3="4" />
+        <position datetime="2018-03-01T00:00:00+00:00" x0="5" x1="6" x2="5" x3="6" y0="5" y1="5" y2="6" y3="6" />
+      </positions>
+    </screen>
+    <screen id="equal_from_no_until"
+    name="A projection screen with the from attribute set to 2018-01-01T00:00:00+00:00, and with no until attribute"
+    from="2018-01-01T00:00:00+00:00">
+      <positions>
+        <position datetime="2018-01-01T00:00:00+00:00" x0="1" x1="2" x2="1" x3="2" y0="1" y1="1" y2="2" y3="2" />
+        <position datetime="2018-02-01T00:00:00+00:00" x0="3" x1="4" x2="3" x3="4" y0="3" y1="3" y2="4" y3="4" />
+        <position datetime="2018-03-01T00:00:00+00:00" x0="5" x1="6" x2="5" x3="6" y0="5" y1="5" y2="6" y3="6" />
+      </positions>
+    </screen>
+    <screen id="late_from_no_until"
+    name="A projection screen with the from attribute set after 2018-01-01T00:00:00+00:00, and with no until attribute"
+    from="2018-01-01T00:00:01+00:00">
+      <positions>
+        <position datetime="2018-01-01T00:00:00+00:00" x0="1" x1="2" x2="1" x3="2" y0="1" y1="1" y2="2" y3="2" />
+        <position datetime="2018-02-01T00:00:00+00:00" x0="3" x1="4" x2="3" x3="4" y0="3" y1="3" y2="4" y3="4" />
+        <position datetime="2018-03-01T00:00:00+00:00" x0="5" x1="6" x2="5" x3="6" y0="5" y1="5" y2="6" y3="6" />
+      </positions>
+    </screen>
+    <screen id="no_from_early_until"
+    name="A projection screen with no from attribute, and with the until attribute set before 2018-03-01T00:00:00+00:00"
+    until="2018-02-28T23:59:59+00:00">
+      <positions>
+        <position datetime="2018-01-01T00:00:00+00:00" x0="1" x1="2" x2="1" x3="2" y0="1" y1="1" y2="2" y3="2" />
+        <position datetime="2018-02-01T00:00:00+00:00" x0="3" x1="4" x2="3" x3="4" y0="3" y1="3" y2="4" y3="4" />
+        <position datetime="2018-03-01T00:00:00+00:00" x0="5" x1="6" x2="5" x3="6" y0="5" y1="5" y2="6" y3="6" />
+      </positions>
+    </screen>
+    <screen id="no_from_equal_until"
+    name="A projection screen with no from attribute, and with the until attribute set to 2018-03-01T00:00:00+00:00"
+    until="2018-03-01T00:00:00+00:00">
+      <positions>
+        <position datetime="2018-01-01T00:00:00+00:00" x0="1" x1="2" x2="1" x3="2" y0="1" y1="1" y2="2" y3="2" />
+        <position datetime="2018-02-01T00:00:00+00:00" x0="3" x1="4" x2="3" x3="4" y0="3" y1="3" y2="4" y3="4" />
+        <position datetime="2018-03-01T00:00:00+00:00" x0="5" x1="6" x2="5" x3="6" y0="5" y1="5" y2="6" y3="6" />
+      </positions>
+    </screen>
+    <screen id="no_from_late_until"
+    name="A projection screen with no from attribute, and with the until attribute set after 2018-03-01T00:00:00+00:00"
+    until="2018-03-01T00:00:01+00:00">
+      <positions>
+        <position datetime="2018-01-01T00:00:00+00:00" x0="1" x1="2" x2="1" x3="2" y0="1" y1="1" y2="2" y3="2" />
+        <position datetime="2018-02-01T00:00:00+00:00" x0="3" x1="4" x2="3" x3="4" y0="3" y1="3" y2="4" y3="4" />
+        <position datetime="2018-03-01T00:00:00+00:00" x0="5" x1="6" x2="5" x3="6" y0="5" y1="5" y2="6" y3="6" />
+      </positions>
+    </screen>
+  </screens>
+</room>

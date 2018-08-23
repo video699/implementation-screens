@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<room id="D1" name="D1 lecture hall">
+  <screens>
+    <screen id="left" name="Left screen">
+      <positions>
+        <position datetime="2010-11-10T00:00:00+01:00" x0="17" x1="304" x2="44" x3="307" y0="27" y1="11" y2="253" y3="243" /> <!-- IA006-D1-20101110.avi -->
+        <position datetime="2015-12-11T00:00:00+01:00" x0="45" x1="331" x2="71" x3="332" y0="46" y1="32" y2="266" y3="261" /> <!-- IB111-D1-20151211.mp4 -->
+        <position datetime="2012-10-16T00:00:00+02:00" x0="15" x1="302" x2="43" x3="305" y0="30" y1="12" y2="253" y3="243" /> <!-- PB001-D1-20121016.avi -->
+      </positions>
+    </screen>
+    <screen id="right" name="Right screen">
+      <positions>
+        <position datetime="2010-11-10T00:00:00+01:00" x0="365" x1="652" x2="357" x3="625" y0="13" y1="34" y2="245" y3="257" /> <!-- IA006-D1-20101110.avi -->
+        <position datetime="2015-12-11T00:00:00+01:00" x0="388" x1="682" x2="382" x3="652" y0="39" y1="60" y2="268" y3="282" /> <!-- IB111-D1-20151211.mp4 -->
+        <position datetime="2012-10-04T00:00:00+02:00" x0="362" x1="651" x2="358" x3="623" y0="12" y1="33" y2="242" y3="254" /> <!-- PA159-D1-20121004.avi -->
+      </positions>
+    </screen>
+  </screens>
+</room>

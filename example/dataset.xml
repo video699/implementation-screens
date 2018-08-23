@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<institution id="example"
+name="Faculty of Foo, Bar University, City, State"
+xmlns:xi="http://www.w3.org/2001/XInclude">
+  <rooms>
+    <xi:include href="123.xml" />
+  </rooms>
+</institution>
