@@ -113,19 +113,20 @@
   <xs:complexType name="camera-type">
     <xs:annotation>
       <xs:documentation xml:lang="en">This element represents a
-      camcoder, whose name is specified in the name
-      attribute. The width, and height attributes specify the
-      width, and the height of the captured video in
-      pixels.</xs:documentation>
+      camcoder, whose name is specified in the name attribute. The
+      width, and height attributes specify the width, and the
+      height of the captured video in pixels.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element představuje
-      videokameru, jejíž název je zadaný atributem name.
-      Atributy width a height zadávají šířku a výšku výsledného
-      videozáznamu v pixelech.</xs:documentation>
+      videokameru, jejíž název je zadaný atributem name. Atributy
+      width a height zadávají šířku a výšku výsledného videozáznamu
+      v pixelech.</xs:documentation>
     </xs:annotation>
     <xs:attribute name="id" type="xs:string" use="required" />
     <xs:attribute name="name" type="xs:string" use="required" />
-    <xs:attribute name="width" type="xs:positiveInteger" use="required" />
-    <xs:attribute name="height" type="xs:positiveInteger" use="required" />
+    <xs:attribute name="width" type="xs:positiveInteger"
+    use="required" />
+    <xs:attribute name="height" type="xs:positiveInteger"
+    use="required" />
   </xs:complexType>
   <xs:complexType name="screens-type">
     <xs:annotation>
@@ -183,13 +184,13 @@
   <xs:complexType name="positions-type">
     <xs:annotation>
       <xs:documentation xml:lang="en">This element contains
-      information about the positions of a single projection
-      screen as it is captured by the camcoder whose id is given
-      by the camera attribute.</xs:documentation>
+      information about the positions of a single projection screen
+      as it is captured by the camcoder whose id is given by the
+      camera attribute.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element obsahuje
-      veškeré informace o rozmístění jednoho projekčního
-      plátna na videozáznamu z kamery, jejíž identifikátor je
-      zadaný atributem camera.</xs:documentation>
+      veškeré informace o rozmístění jednoho projekčního plátna na
+      videozáznamu z kamery, jejíž identifikátor je zadaný
+      atributem camera.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="position" type="position-type"
