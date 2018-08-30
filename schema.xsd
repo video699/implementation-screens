@@ -16,6 +16,7 @@
         <xs:element name="institution" type="institution-type"
         minOccurs="0" maxOccurs="unbounded" />
       </xs:sequence>
+      <xs:attribute ref="xml:base" />
     </xs:complexType>
     <xs:unique name="institution-ids">
       <xs:selector xpath="institution" />
@@ -47,14 +48,23 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">This element contains
       information about the positions of projection screens at a
-      single institutions.</xs:documentation>
+      single institution.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element obsahuje
       veškeré informace o rozmístění projekčních pláten v rámci
       jedné instituce.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="room" type="room-type" minOccurs="0"
-      maxOccurs="unbounded" />
+      maxOccurs="unbounded">
+        <xs:key name="camera-keys">
+          <xs:selector xpath="./cameras/camera" />
+          <xs:field xpath="@id" />
+        </xs:key>
+        <xs:keyref name="position-keyrefs" refer="camera-keys">
+          <xs:selector xpath="./screens/screen/positions" />
+          <xs:field xpath="@camera" />
+        </xs:keyref>
+      </xs:element>
     </xs:sequence>
     <xs:attribute ref="xml:base" />
   </xs:complexType>
@@ -68,6 +78,12 @@
       name.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
+      <xs:element name="cameras" type="cameras-type">
+        <xs:unique name="camera-ids">
+          <xs:selector xpath="camera" />
+          <xs:field xpath="@id" />
+        </xs:unique>
+      </xs:element>
       <xs:element name="screens" type="screens-type">
         <xs:unique name="screen-ids">
           <xs:selector xpath="screen" />
@@ -78,6 +94,38 @@
     <xs:attribute name="id" type="xs:string" use="required" />
     <xs:attribute name="name" type="xs:string" use="required" />
     <xs:attribute ref="xml:base" />
+  </xs:complexType>
+  <xs:complexType name="cameras-type">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This element contains
+      information about the positions of projection screens in a
+      single room.</xs:documentation>
+      <xs:documentation xml:lang="cs">Tento element obsahuje
+      veškeré informace o rozmístění projekčních pláten v rámci
+      jedné místnosti.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="camera" type="camera-type" minOccurs="0"
+      maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute ref="xml:base" />
+  </xs:complexType>
+  <xs:complexType name="camera-type">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This element represents a
+      camcoder, whose name is specified in the name
+      attribute. The width, and height attributes specify the
+      width, and the height of the captured video in
+      pixels.</xs:documentation>
+      <xs:documentation xml:lang="cs">Tento element představuje
+      videokameru, jejíž název je zadaný atributem name.
+      Atributy width a height zadávají šířku a výšku výsledného
+      videozáznamu v pixelech.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="width" type="xs:positiveInteger" use="required" />
+    <xs:attribute name="height" type="xs:positiveInteger" use="required" />
   </xs:complexType>
   <xs:complexType name="screens-type">
     <xs:annotation>
@@ -92,6 +140,7 @@
       <xs:element name="screen" type="screen-type" minOccurs="0"
       maxOccurs="unbounded" />
     </xs:sequence>
+    <xs:attribute ref="xml:base" />
   </xs:complexType>
   <xs:complexType name="screen-type">
     <xs:annotation>
@@ -135,15 +184,19 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">This element contains
       information about the positions of a single projection
-      screen.</xs:documentation>
+      screen as it is captured by the camcoder whose id is given
+      by the camera attribute.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element obsahuje
       veškeré informace o rozmístění jednoho projekčního
-      plátna.</xs:documentation>
+      plátna na videozáznamu z kamery, jejíž identifikátor je
+      zadaný atributem camera.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="position" type="position-type"
       minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
+    <xs:attribute name="camera" type="xs:string" use="required" />
+    <xs:attribute ref="xml:base" />
   </xs:complexType>
   <xs:complexType name="position-type">
     <xs:annotation>
@@ -172,6 +225,5 @@
     <xs:attribute name="y2" type="xs:integer" use="required" />
     <xs:attribute name="x3" type="xs:integer" use="required" />
     <xs:attribute name="y3" type="xs:integer" use="required" />
-    <xs:attribute ref="xml:base" />
   </xs:complexType>
 </xs:schema>
