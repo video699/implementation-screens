@@ -139,7 +139,12 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="screen" type="screen-type" minOccurs="0"
-      maxOccurs="unbounded" />
+      maxOccurs="unbounded">
+        <xs:unique name="positions-cameras">
+          <xs:selector xpath="positions" />
+          <xs:field xpath="@camera" />
+        </xs:unique>
+      </xs:element>
     </xs:sequence>
     <xs:attribute ref="xml:base" />
   </xs:complexType>
@@ -167,7 +172,7 @@
       projekční plátno přítomné kdykoliv od data a času zadaného
       (případně výchozí) hodnotou atributu from.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
+    <xs:sequence maxOccurs="unbounded">
       <xs:element name="positions" type="positions-type">
         <xs:unique name="position-datetimes">
           <xs:selector xpath="position" />
