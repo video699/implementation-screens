@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<room id="D3" name="D3 lecture hall">
+  <cameras>
+    <camera id="default_2004"
+    name="The built-in camcoder present since 2004"
+    width="720" height="576" />
+  </cameras>
+  <screens>
+    <screen id="left" name="Left screen">
+      <positions camera="default_2004">
+        <position datetime="2011-03-31T00:00:00+02:00" x0="-22" x1="340" x2="9" x3="348" y0="32" y1="16" y2="309" y3="300" /> <!-- PA152-D3-20110331.avi -->
+        <position datetime="2015-03-11T00:00:00+01:00" x0="2" x1="366" x2="29" x3="366" y0="28" y1="20" y2="305" y3="305" /> <!-- PB009-D3-20150311.mp4 -->
+        <position datetime="2016-10-26T00:00:00+02:00" x0="2" x1="369" x2="30" x3="368" y0="28" y1="20" y2="306" y3="306" /> <!-- PB029-D3-20161026.mp4 -->
+      </positions>
+    </screen>
+    <screen id="right" name="Right screen">
+      <positions camera="default_2004">
+        <position datetime="2011-03-31T00:00:00+02:00" x0="345" x1="704" x2="351" x3="686" y0="16" y1="14" y2="300" y3="290" /> <!-- PA152-D3-20110331.avi -->
+        <position datetime="2015-03-11T00:00:00+01:00" x0="367" x1="730" x2="367" x3="706" y0="19" y1="24" y2="304" y3="303" /> <!-- PB009-D3-20150311.mp4 -->
+        <position datetime="2016-10-26T00:00:00+02:00" x0="378" x1="730" x2="388" x3="706" y0="20" y1="24" y2="305" y3="303" /> <!-- PB029-D3-20161026.mp4 -->
+      </positions>
+    </screen>
+    <screen id="entire" name="Entire screen">
+      <positions camera="default_2004">
+        <position datetime="2011-03-31T00:00:00+02:00" x0="-22" x1="704" x2="9" x3="686" y0="32" y1="14" y2="309" y3="290" /> <!-- PA152-D3-20110331.avi -->
+        <position datetime="2015-03-11T00:00:00+01:00" x0="2" x1="730" x2="29" x3="706" y0="28" y1="24" y2="305" y3="303" /> <!-- PB009-D3-20150311.mp4 -->
+        <position datetime="2016-10-26T00:00:00+02:00" x0="1" x1="545" x2="29" x3="706" y0="27" y1="24" y2="304" y3="302" /> <!-- PB029-D3-20161026.mp4 -->
+      </positions>
+    </screen>
+  </screens>
+</room>
+

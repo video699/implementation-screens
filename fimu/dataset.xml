@@ -3,8 +3,8 @@
 name="Faculty of Informatics, Masaryk University, Brno, Czech Republic"
 xmlns:xi="http://www.w3.org/2001/XInclude">
   <rooms>
-  <xi:include href="d1.xml" />
-    <!-- <xi:include href="d2.xml" /> -->
-    <!-- <xi:include href="d3.xml" /> -->
+    <xi:include href="d1.xml" />
+    <xi:include href="d2.xml" />
+    <xi:include href="d3.xml" />
   </rooms>
 </institution>
