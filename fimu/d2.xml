@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<room id="D2" name="D2 lecture hall">
+<room id="d2" name="D2 lecture hall">
   <cameras>
     <camera id="default_2004"
     name="The built-in camcoder present since 2004"
     width="720" height="576" />
   </cameras>
   <screens>
-    <screen id="left" name="Left screen">
+    <screen id="left" name="Left screen" aspect-width="4" aspect-height="3">
       <positions camera="default_2004">
         <position datetime="2013-03-11T00:00:00+01:00" x0="113" x1="394" x2="134" x3="393" y0="41" y1="30" y2="262" y3="251" /> <!-- PV112-D2-20130311.avi -->
         <position datetime="2014-03-05T00:00:00+01:00" x0="55" x1="354" x2="78" x3="357" y0="100" y1="90" y2="340" y3="323" /> <!-- PB069-D2-20140305.mp4 -->
@@ -16,7 +16,7 @@
         <position datetime="2016-04-06T00:00:00+02:00" x0="-4" x1="321" x2="31" x3="320" y0="48" y1="32" y2="303" y3="277" /> <!-- IV109-D2-20160406.mp4 -->
       </positions>
     </screen>
-    <screen id="right" name="Right screen">
+    <screen id="right" name="Right screen" aspect-width="4" aspect-height="3">
       <positions camera="default_2004">
         <position datetime="2013-03-11T00:00:00+01:00" x0="458" x1="688" x2="450" x3="666" y0="30" y1="47" y2="247" y3="237" /> <!-- PV112-D2-20130311.avi -->
         <position datetime="2015-03-24T00:00:00+01:00" x0="416" x1="646" x2="412" x3="628" y0="52" y1="65" y2="269" y3="255" /> <!-- PA103-D2-20150324.mp4 -->

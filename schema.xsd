@@ -160,8 +160,9 @@
       time that marks the screen's removal. When the until
       attribute is left unspecified, the screen is assumed to be
       present at any point since the date and time specified by the
-      (possibly inferred) value of the from
-      attribute.</xs:documentation>
+      (possibly inferred) value of the from attribute. The
+      aspect-width and aspect-height attributes specify the aspect
+      ratio of the screen.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element představuje
       projekční plátno, jehož popis je zadaný atributem name.
       Volitelný atribut from zadává datum a čas instalace plátna.
@@ -170,7 +171,9 @@
       until zadává datum odstranění projekčního plátna. Pokud není
       zadána hodnota atributu until zadána, předpokládá se, že je
       projekční plátno přítomné kdykoliv od data a času zadaného
-      (případně výchozí) hodnotou atributu from.</xs:documentation>
+      (případně výchozí) hodnotou atributu from. Atributy
+      aspect-width a aspect-height zadávají poměr stran projekčního
+      plátna.</xs:documentation>
     </xs:annotation>
     <xs:sequence maxOccurs="unbounded">
       <xs:element name="positions" type="positions-type">
@@ -184,6 +187,10 @@
     <xs:attribute name="name" type="xs:string" use="required" />
     <xs:attribute name="from" type="xs:dateTime" />
     <xs:attribute name="until" type="xs:dateTime" />
+    <xs:attribute name="aspect-width" type="xs:positiveInteger"
+    use="required" />
+    <xs:attribute name="aspect-height" type="xs:positiveInteger"
+    use="required" />
     <xs:attribute ref="xml:base" />
   </xs:complexType>
   <xs:complexType name="positions-type">
