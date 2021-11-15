@@ -1,11 +1,12 @@
-.. image:: https://circleci.com/gh/video699/implementation-screens/tree/master.svg?style=shield
-    :target: https://circleci.com/gh/video699/implementation-screens/tree/master
+.. image:: https://github.com/video699/implementation-screens/actions/workflows/test.yml/badge.svg
+      :target: https://github.com/video699/implementation-screens/actions/workflows/test.yml
+      :alt: Continuous Integration
 
 This is a XML dataset that describes the *projection screens* and *camcoders*
 installed in *rooms* belonging to an *institution*.
 
 .. image:: schema.png
-    :target: schema.png
+      :target: schema.png
 
 The XML schema ``schema.xsd`` describes the structure of the dataset.  The
 `linked presentation
